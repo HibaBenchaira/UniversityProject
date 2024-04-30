@@ -1,13 +1,13 @@
-package com.emsi.projetspring;
+package com.emsi.projectspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetSpringApplication {
+public class ProjectSpringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProjetSpringApplication.class, args);
+        SpringApplication.run(ProjectSpringApplication.class, args);
     }
 
 }
