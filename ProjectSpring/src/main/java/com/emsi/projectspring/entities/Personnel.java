@@ -29,9 +29,8 @@ public class Personnel {
 
     @OneToMany(mappedBy = "nomPersonnel" , fetch = FetchType.LAZY)
     private List<Dossier> dossiers= new ArrayList<>();
-
-    @OneToMany(mappedBy = "personnel")
-    private List<FonctionEmployee> fonctionEmployees= new ArrayList<>();
+    @ManyToOne
+    private FonctionEmployee fonctionEmployee;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(

@@ -18,9 +18,9 @@ public class Fonction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomFonction;
+    @ManyToOne
+    private FonctionEmployee fonctionEmployee;
 
-    @OneToMany(mappedBy = "fonction")
-    private List<FonctionEmployee> fonctionEmployees;
 
 
 
