@@ -1,9 +1,6 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,5 +17,9 @@ public class Dossier {
     private Long id;
     private String bulletin;
     private String diplome;
+    @ManyToOne
+    private Personnel nomPersonnel;
+    @OneToOne(mappedBy = "dossier",cascade = CascadeType.ALL)
+    private Etudiant etudiant;
 
 }

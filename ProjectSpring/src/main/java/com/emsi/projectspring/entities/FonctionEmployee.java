@@ -1,9 +1,6 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,5 +19,12 @@ public class FonctionEmployee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date dateDebut;
+    @ManyToOne
+    @JoinColumn(name="personnel_id")
+    private Personnel personnel;
+
+    @ManyToOne
+    @JoinColumn(name="fonction_id")
+    private Fonction fonction;
 
 }

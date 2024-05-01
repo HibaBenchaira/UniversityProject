@@ -1,9 +1,6 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +20,9 @@ public class Compte {
     private String password;
     private String role;
 
+    @OneToOne(mappedBy = "compte",cascade = CascadeType.ALL)
+    private Personnel personnel;
+
+    @OneToOne(mappedBy = "compte",cascade = CascadeType.ALL)
+    private Etudiant etudiant;
 }

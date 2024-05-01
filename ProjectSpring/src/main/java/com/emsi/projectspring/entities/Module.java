@@ -1,13 +1,13 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,4 +20,6 @@ public class Module {
     private Long id;
     private String nomModule;
     private Double volumeHoraire;
+    @ManyToMany(mappedBy = "modules")
+    private List<Personnel> personnels=new ArrayList<>();
 }
