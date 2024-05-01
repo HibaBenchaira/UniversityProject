@@ -17,10 +17,6 @@ public class Dossier {
     private Long id;
     private String bulletin;
     private String diplome;
-    @ManyToOne
-    private Personnel nomPersonnel;
-    @OneToOne(mappedBy = "dossier",cascade = CascadeType.ALL)
-    private Etudiant etudiant;
 
     @ManyToOne
     private Personnel nomPersonnel;
