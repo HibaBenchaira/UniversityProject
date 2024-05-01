@@ -1,9 +1,6 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +20,11 @@ public class Compte {
     private String password;
     private String role;
 
+    @OneToOne
+    @JoinColumn(name ="personal_id" , referencedColumnName = "id")
+    private Personnel personnel;
+
+    @OneToOne
+    @JoinColumn(name = "etudiant_id", referencedColumnName = "id")
+    private Etudiant etudiant;
 }
