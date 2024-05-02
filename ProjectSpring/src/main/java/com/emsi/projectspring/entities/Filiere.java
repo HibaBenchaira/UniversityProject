@@ -20,7 +20,8 @@ public class Filiere {
     private Long id;
     private String nomFiliere;
 
-
+    @ManyToOne
+    private Departement departement;
     @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Inscription> inscriptions= new ArrayList<>();
     @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
