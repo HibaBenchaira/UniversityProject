@@ -21,5 +21,5 @@ public class Matiere {
     private Double volumeHoraire;
 
     @ManyToOne
-    private Module module;
+    private Module nomModule;
 }
