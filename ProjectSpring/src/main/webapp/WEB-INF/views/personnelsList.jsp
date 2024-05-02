@@ -13,8 +13,25 @@
                 <h1>Personnels List</h1>
             </header>
             <main>
-                <table>
-                    
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nom Personnel</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telephone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${personnelsVue}" var="personnel">
+                            <tr>
+                                <td>${personnel.id}</td>
+                                <td>${personnel.nomPersonnel}</td>
+                                <td>${personnel.email}</td>
+                                <td>${personnel.telephone}</td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
                 </table>
 
             </main>

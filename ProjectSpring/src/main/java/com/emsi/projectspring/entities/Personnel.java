@@ -20,7 +20,7 @@ public class Personnel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomPersonnel;
-    private int telephone;
+    private String telephone;
     private String email;
 
     @OneToOne
