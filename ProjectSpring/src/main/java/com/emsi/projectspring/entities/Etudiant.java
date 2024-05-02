@@ -19,7 +19,7 @@ public class Etudiant {
     private Long id;
     private String nomEtudiant;
     private String Grade;
-    private int telephone;
+    private String telephone;
     private String address;
     private String email;
 
