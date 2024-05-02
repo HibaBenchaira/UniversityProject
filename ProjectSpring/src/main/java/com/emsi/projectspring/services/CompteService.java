@@ -2,10 +2,11 @@ package com.emsi.projectspring.services;
 
 import com.emsi.projectspring.entities.Compte;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Repository
+@Service
 public interface CompteService {
     Compte saveCompte(Compte compte);
     Compte updateCompte(Compte compte);

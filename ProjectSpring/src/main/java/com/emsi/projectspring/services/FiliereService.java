@@ -4,7 +4,7 @@ import com.emsi.projectspring.entities.Filiere;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public interface FiliereService {
     Filiere saveFiliere(Filiere filiere);
     Filiere updateFiliere(Filiere filiere);
