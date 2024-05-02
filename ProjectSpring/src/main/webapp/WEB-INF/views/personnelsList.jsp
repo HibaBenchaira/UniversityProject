@@ -29,6 +29,12 @@
                                 <td>${personnel.nomPersonnel}</td>
                                 <td>${personnel.email}</td>
                                 <td>${personnel.telephone}</td>
+                                <td>
+                                    <a      onclick="return confirm('Are you sure you want to delete?')"
+                                            href="/deletePersonnel?id=${personnel.id}">
+                                        Delete
+                                    </a>
+                                </td>
                             </tr>
                         </c:forEach>
                     </tbody>

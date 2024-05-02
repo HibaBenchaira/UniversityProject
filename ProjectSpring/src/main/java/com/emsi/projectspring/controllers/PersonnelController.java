@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -29,5 +30,10 @@ public class PersonnelController {
         List <Personnel> personnelsController = personnelService.getAllPersonnels();
         modelMap.addAttribute("personnelsVue", personnelsController);
         return "personnelsList";
+    }
+    @RequestMapping("/deletePersonnel")
+    public String deletePersonnel(@RequestParam("id")Long id, ModelMap modelMap) {
+        personnelService.deletePersonnelById(id);
+        return personnelsList(modelMap);
     }
 }
