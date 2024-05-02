@@ -21,8 +21,8 @@ public class Filiere {
     private String nomFiliere;
 
 
-    @OneToMany(mappedBy = "nomFiliere",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Inscription> inscriptions= new ArrayList<>();
-    @OneToMany(mappedBy = "nomFiliere",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Module> modules= new ArrayList<>();
 }
