@@ -22,9 +22,9 @@ public class Inscription {
 
 
     @ManyToOne
-    private Etudiant nomEtudiant;
+    private Etudiant etudiant;
     @ManyToOne
-    private Filiere nomFiliere;
+    private Filiere filiere;
 
 
 }
