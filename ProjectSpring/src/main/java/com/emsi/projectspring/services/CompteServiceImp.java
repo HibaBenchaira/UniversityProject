@@ -21,12 +21,12 @@ public class CompteServiceImp implements CompteService {
     }
 
     @Override
-    public Compte deleteCompteById(Long id) {
+    public void deleteCompteById(Long id) {
         compteRepository.deleteById(id);
     }
 
     @Override
-    public Compte deleteAllComptes() {
+    public void deleteAllComptes() {
         compteRepository.deleteAll();
     }
 

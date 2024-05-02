@@ -9,8 +9,8 @@ import java.util.List;
 public interface CompteService {
     Compte saveCompte(Compte compte);
     Compte updateCompte(Compte compte);
-    Compte deleteCompteById(Long id);
-    Compte deleteAllComptes();
+    void deleteCompteById(Long id);
+    void deleteAllComptes();
     Compte getCompteById(Long id);
     List<Compte> getAllComptes();
 }
