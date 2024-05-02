@@ -1,4 +1,4 @@
-package com.emsi.projectspring.Services;
+package com.emsi.projectspring.services;
 
 import com.emsi.projectspring.repositories.FiliereRepository;
 import com.emsi.projectspring.entities.Filiere;
