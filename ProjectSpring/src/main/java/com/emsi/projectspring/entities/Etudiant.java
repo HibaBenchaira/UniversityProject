@@ -30,7 +30,7 @@ public class Etudiant {
     @JoinColumn(name = "dossier_id", referencedColumnName = "id")
     private Dossier dossier;
 
-    @OneToMany(mappedBy = "nomEtudiant",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
     private List<Inscription> inscriptions= new ArrayList<>();
 
     @ManyToOne

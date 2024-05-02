@@ -31,8 +31,8 @@ public class Module {
 
     @ManyToOne
     private Note note;
-    @OneToMany(mappedBy = "nomModule",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "module",fetch = FetchType.LAZY)
     private List<Matiere> matieres= new ArrayList<>();
     @ManyToOne
-    private Filiere nomFiliere;
+    private Filiere filiere;
 }
