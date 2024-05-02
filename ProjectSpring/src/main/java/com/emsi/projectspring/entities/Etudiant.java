@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
 @Entity
 @Data
 @AllArgsConstructor
@@ -27,6 +29,12 @@ public class Etudiant {
     @OneToOne
     @JoinColumn(name = "dossier_id", referencedColumnName = "id")
     private Dossier dossier;
+
+    @OneToMany(mappedBy = "nomEtudiant",fetch = FetchType.LAZY)
+    private List<Inscription> inscriptions= new ArrayList<>();
+
+    @ManyToOne
+    private Note note;
 
 
 

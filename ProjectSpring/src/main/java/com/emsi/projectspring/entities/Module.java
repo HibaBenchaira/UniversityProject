@@ -28,4 +28,11 @@ public class Module {
         inverseJoinColumns = @JoinColumn(name="personnel_id")
     )
     private List<Personnel> personnels=new ArrayList<>();
+
+    @ManyToOne
+    private Note note;
+    @OneToMany(mappedBy = "nomModule",fetch = FetchType.LAZY)
+    private List<Matiere> matieres= new ArrayList<>();
+    @ManyToOne
+    private Filiere filiere;
 }

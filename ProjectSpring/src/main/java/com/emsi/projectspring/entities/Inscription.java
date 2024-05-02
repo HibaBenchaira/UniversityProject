@@ -1,9 +1,6 @@
 package com.emsi.projectspring.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,5 +19,12 @@ public class Inscription {
     private Long id;
     private String type;
     private Date dateInscription;
+
+
+    @ManyToOne
+    private Etudiant nomEtudiant;
+    @ManyToOne
+    private Filiere nomFiliere;
+
 
 }
