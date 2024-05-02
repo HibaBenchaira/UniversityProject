@@ -4,7 +4,6 @@ import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.repositories.CompteRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 @Service
 @AllArgsConstructor
@@ -21,12 +20,12 @@ public class CompteServiceImp implements CompteService {
     }
 
     @Override
-    public Compte deleteCompteById(Long id) {
+    public void deleteCompteById(Long id) {
         compteRepository.deleteById(id);
     }
 
     @Override
-    public Compte deleteAllComptes() {
+    public void deleteAllComptes() {
         compteRepository.deleteAll();
     }
 
