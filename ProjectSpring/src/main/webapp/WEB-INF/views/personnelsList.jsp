@@ -35,6 +35,11 @@
                                         Delete
                                     </a>
                                 </td>
+                                <td>
+                                    <a href="/editPersonnel?id=${personnel.id}">
+                                        Edit
+                                    </a>
+                                </td>
                             </tr>
                         </c:forEach>
                     </tbody>

@@ -36,4 +36,15 @@ public class PersonnelController {
         personnelService.deletePersonnelById(id);
         return personnelsList(modelMap);
     }
+    @RequestMapping("/editPersonnel")
+    public String editPersonnel(@RequestParam("id")Long id,ModelMap modelMap){
+        Personnel personnelController = personnelService.getPersonnelById(id);
+        modelMap.addAttribute("personnelView",personnelController);
+        return "EditPersonnel";
+    }
+    @RequestMapping("/updatePersonnel")
+    public String updatePeronnel(@ModelAttribute ("personnelVue") Personnel personnelController){
+        personnelService.updatePersonnel(personnelController);
+        return createPersonnel();
+    }
 }
