@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personnel Creation</title>
+    <title>Dossier Creation</title>
 </head>
 <body>
 <header>
@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="personnelsList">Personnels Creation</a>
+                        <a class="nav-link" href="dossiersList">Dossiers List</a>
                     </li>
                 </ul>
             </div>
@@ -37,24 +37,21 @@
 
     <!-- Jumbotron -->
     <div class="p-1 text-center bg-light">
-        <h1 class="mb-3">Personnel Creation - JSP</h1>
+        <h1 class="mb-3">Dossier Creation - JSP</h1>
     </div>
     <!-- Jumbotron -->
 </header>
 <main class="container mt-5">
-    <form action="savePersonnel" method="post">
+    <form action="saveDossier" method="post">
         <div class="form-group">
-            <label class="form-label" for="nomPersonnel">Personnel Name : </label>
-            <input class="form-control" type="text" id="nomPersonnel" name="nomPersonnel">
+            <label class="form-label" for="bulletin">Bulletin : </label>
+            <input class="form-control" type="text" id="bulletin" name="bulletin">
         </div>
         <div class="form-group">
-            <label class="form-label" for="email">Email : </label>
-            <input class="form-control" type="email" id="email" name="email" >
+            <label class="form-label" for="diplome">Diplome : </label>
+            <input class="form-control" type="text" id="diplome" name="diplome">
         </div>
-        <div class="form-group">
-            <label class="form-label"  for="telephone">Telephone : </label>
-            <input class="form-control" type="tel" id="telephone" name="telephone"   >
-        </div>
+
         <div class="form-group">
             <input class="form-control btn btn-primary" type="submit" value="Save">
         </div>

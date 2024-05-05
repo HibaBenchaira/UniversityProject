@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,7 +22,10 @@ public class FonctionEmployee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateDebut;
+
 
     @OneToMany(mappedBy = "fonctionEmployee")
     private List<Personnel> personnels= new ArrayList<>();
