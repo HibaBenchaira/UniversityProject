@@ -1,7 +1,7 @@
 package com.emsi.projectspring.services;
 
+import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.entities.Matiere;
-import com.emsi.projectspring.repositories.DossierRepository;
 import com.emsi.projectspring.repositories.MatiereRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.List;
 public class MatiereServiceImp implements MatiereService {
     private MatiereRepository matiereRepository;
     @Override
-    public Matiere saveMatiere(Matiere matiere) {
+    public Matiere saveMatiere(Compte matiere) {
         return matiereRepository.save(matiere);
     }
 
