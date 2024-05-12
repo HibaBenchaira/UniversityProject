@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public interface MatiereService {
-    Matiere saveMatiere(Compte matiere);
+    Matiere saveMatiere(Matiere matiere);
     Matiere updateMatiere(Matiere matiere);
     void deleteMatiereById(Long id);
     void deleteAllMatieres();

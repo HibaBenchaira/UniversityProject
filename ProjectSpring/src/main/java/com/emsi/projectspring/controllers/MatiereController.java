@@ -24,7 +24,7 @@ public class MatiereController {
     }
 
     @RequestMapping("saveMatiere")
-    public String saveMatiere(@ModelAttribute("matiereVue") Compte matiereController) {
+    public String saveMatiere(@ModelAttribute("matiereVue") Matiere matiereController) {
         Matiere savedMatiere = matiereService.saveMatiere(matiereController);
         return "CreateMatiere";
     }
