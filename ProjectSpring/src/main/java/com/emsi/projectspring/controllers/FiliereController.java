@@ -2,9 +2,11 @@ package com.emsi.projectspring.controllers;
 
 import com.emsi.projectspring.entities.Filiere;
 import com.emsi.projectspring.services.FiliereService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +22,8 @@ public class FiliereController {
         return"CreateFiliere";
     }
     @RequestMapping("/saveFiliere")
-    public String saveFiliere(@ModelAttribute("filiereVue") Filiere filiereController){
+    public String saveFiliere(@Valid Filiere filiereController , BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateFiliere";
         Filiere saveFiliere = filiereService.saveFiliere(filiereController);
         return "CreateFiliere";
     }

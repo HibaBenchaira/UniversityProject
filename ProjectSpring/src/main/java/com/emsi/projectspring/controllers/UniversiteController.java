@@ -3,9 +3,11 @@ package com.emsi.projectspring.controllers;
 import com.emsi.projectspring.entities.Personnel;
 import com.emsi.projectspring.entities.Universite;
 import com.emsi.projectspring.services.UniversiteService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +23,8 @@ public class UniversiteController {
         return"CreateUniversite";
     }
     @RequestMapping("/saveUniversite")
-    public String saveUniversite(@ModelAttribute("universiteVue")Universite universiteController){
+    public String saveUniversite(@Valid Universite universiteController, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateUniversite";
        Universite saveUniversity = universiteService.saveUniversite(universiteController);
        return "CreateUniversite";
     }

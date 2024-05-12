@@ -2,10 +2,12 @@ package com.emsi.projectspring.controllers;
 
 import com.emsi.projectspring.entities.Faculte;
 import com.emsi.projectspring.services.FaculteService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.ui.ModelMap;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +25,8 @@ public class FaculteController {
     }
 
     @RequestMapping("/saveFaculte")
-    public String saveFaculte(@ModelAttribute("faculteVue") Faculte faculteController) {
+    public String saveFaculte(@Valid Faculte faculteController, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateFaculte";
         Faculte saveFaculte = faculteService.saveFaculte(faculteController);
         return "CreateFaculte";
     }

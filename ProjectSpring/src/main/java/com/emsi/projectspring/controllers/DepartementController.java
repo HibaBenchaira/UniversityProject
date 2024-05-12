@@ -2,9 +2,11 @@ package com.emsi.projectspring.controllers;
 
 import com.emsi.projectspring.entities.Departement;
 import com.emsi.projectspring.services.DepartementService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +23,8 @@ public class DepartementController {
     }
 
     @RequestMapping("/saveDepartement")
-    public String saveDepartement(@ModelAttribute("departementVue") Departement departementController) {
+    public String saveDepartement(@Valid Departement departementController, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateDepartement";
         Departement savedDepartement = departementService.saveDepartement(departementController);
         return "CreateDepartement";
     }
