@@ -3,9 +3,11 @@ package com.emsi.projectspring.controllers;
 import com.emsi.projectspring.entities.Personnel;
 import com.emsi.projectspring.services.PersonnelService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +23,8 @@ public class PersonnelController {
         return "CreatePersonnel";
     }
     @RequestMapping("savePersonnel")
-    public String savePersonnel(@ModelAttribute ("personnelVue") Personnel personnelController) {
+    public String savePersonnel(@Valid Personnel personnelController, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreatePersonnel";
         Personnel savedPersonnel = personnelService.savePersonnel(personnelController);
         return "CreatePersonnel";
     }

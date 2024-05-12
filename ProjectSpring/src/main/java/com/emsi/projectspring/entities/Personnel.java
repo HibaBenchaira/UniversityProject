@@ -1,6 +1,8 @@
 package com.emsi.projectspring.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,8 +21,12 @@ public class Personnel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "ERROR NAME")
     private String nomPersonnel;
+    @NotBlank(message = "ERROR PHONE NUMBER")
     private String telephone;
+    @NotBlank(message = "ERROR EMAIL")
+    @Email
     private String email;
 
     @OneToOne

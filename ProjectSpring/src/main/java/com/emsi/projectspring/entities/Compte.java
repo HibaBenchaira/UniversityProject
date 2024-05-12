@@ -1,6 +1,7 @@
 package com.emsi.projectspring.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,8 +17,11 @@ public class Compte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "ERROR LOGIN")
     private String login;
+    @NotBlank(message = "ERROR PASSWORD")
     private String password;
+    @NotBlank(message = "ERROR ROLE")
     private String role;
 
     @OneToOne

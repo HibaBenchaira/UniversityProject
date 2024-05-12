@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"    xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="TemplateCompte.html"
+>
+<head>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comptes List</title>
+</head>
+<body>
+<div layout:fragment="content">
+<main class="container mt-5">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Login</th>
+            <th scope="col">Password</th>
+            <th scope="col">Role</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="compte:${comptesVue}" >
+                <td th:text=" ${compte.id}"></td>
+                <td th:text="${compte.login}"></td>
+                <td th:text="${compte.password}"></td>
+                <td th:text="${compte.role}"></td>
+
+                <td>
+                    <a      class="btn bg-danger"
+                            onclick="return confirm('Are you sure you want to delete?')"
+                            th:href="@{/deleteCompte(id=${compte.id})}">
+                        Delete
+                    </a>
+                </td>
+                <td>
+                    <a      class="btn bg-success"
+                            th:href="@{/editCompte(id=${compte.id})}">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</main>
+
+</div>
+</body>
+</html>

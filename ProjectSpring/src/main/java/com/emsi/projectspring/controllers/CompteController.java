@@ -3,9 +3,11 @@ package com.emsi.projectspring.controllers;
 import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.services.CompteService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +25,8 @@ public class CompteController {
     }
 
     @RequestMapping("saveCompte")
-    public String saveCompte(@ModelAttribute("compteVue") Compte compteController) {
+    public String saveCompte(@Valid Compte compteController , BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateCompte";
         Compte savedCompte = compteService.saveCompte(compteController);
         return "CreateCompte";
     }
