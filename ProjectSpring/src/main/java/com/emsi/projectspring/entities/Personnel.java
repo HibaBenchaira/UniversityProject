@@ -35,8 +35,14 @@ public class Personnel {
 
     @OneToMany(mappedBy = "nomPersonnel" , fetch = FetchType.LAZY)
     private List<Dossier> dossiers= new ArrayList<>();
-    @ManyToOne
-    private FonctionEmployee fonctionEmployee;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "personnel_fonction",
+            joinColumns = @JoinColumn(name = "personnel_id"),
+            inverseJoinColumns = @JoinColumn(name = "fonction_id")
+    )
+    private List<Module> fonctions=new ArrayList<>();
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(

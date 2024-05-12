@@ -6,7 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
+
 
 @Entity
 @Data
@@ -18,8 +20,13 @@ public class Fonction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomFonction;
-    @ManyToOne
-    private FonctionEmployee fonctionEmployee;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name="personnel_module",
+            joinColumns = @JoinColumn(name="fonction_id"),
+            inverseJoinColumns = @JoinColumn(name="personnel_id")
+    )
+    private List<Personnel> personnels=new ArrayList<>();
 
 
 
