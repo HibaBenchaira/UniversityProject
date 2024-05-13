@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="TemplateEtudiant.html"
+>
+<head>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etudiant Creation</title>
+</head>
+<body>
+<div layout:fragment="content">
+<main class="container mt-5">
+    <form th:action="@{saveEtudiant}" method="post">
+        <div class="form-group">
+            <label class="form-label" for="nomEtudiant"> nomEtudiant : </label>
+            <input class="form-control" type="text" id="nomEtudiant" name="nomEtudiant">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="Grade">Grade : </label>
+            <input class="form-control" type="number" id="Grade" name="Grade" >
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="telephone">telephone : </label>
+            <input class="form-control" type="number" id="telephone" name="telephone" >
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="address"> address : </label>
+            <input class="form-control" type="text" id="address" name="address">
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="email"> email : </label>
+            <input class="form-control" type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <input class="form-control btn btn-primary" type="submit" value="Save">
+        </div>
+    </form>
+</main>
+
+</div>
+</body>
+</html>
+
