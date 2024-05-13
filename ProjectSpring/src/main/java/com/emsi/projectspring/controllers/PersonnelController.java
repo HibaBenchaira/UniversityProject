@@ -22,7 +22,7 @@ public class PersonnelController {
     private PersonnelService personnelService;
     private CompteService  compteService;
     @RequestMapping("/createPersonnel")
-    public String createPersonnel(ModelMap modelMap) {
+    public String createPersonnel() {
         List<Compte> comptes= compteService.getAllComptes();
         return "CreatePersonnel";
     }
