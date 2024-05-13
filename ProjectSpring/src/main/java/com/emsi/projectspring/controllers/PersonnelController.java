@@ -1,6 +1,8 @@
 package com.emsi.projectspring.controllers;
 
+import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.entities.Personnel;
+import com.emsi.projectspring.services.CompteService;
 import com.emsi.projectspring.services.PersonnelService;
 
 import jakarta.validation.Valid;
@@ -18,8 +20,10 @@ import java.util.List;
 @AllArgsConstructor
 public class PersonnelController {
     private PersonnelService personnelService;
+    private CompteService  compteService;
     @RequestMapping("/createPersonnel")
-    public String createPersonnel() {
+    public String createPersonnel(ModelMap modelMap) {
+        List<Compte> comptes= compteService.getAllComptes();
         return "CreatePersonnel";
     }
     @RequestMapping("savePersonnel")

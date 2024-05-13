@@ -1,5 +1,6 @@
 package com.emsi.projectspring.services;
 
+import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.entities.Matiere;
 import org.springframework.stereotype.Service;
 

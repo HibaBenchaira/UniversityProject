@@ -35,4 +35,5 @@ public class Module {
     private List<Matiere> matieres= new ArrayList<>();
     @ManyToOne
     private Filiere filiere;
+
 }
