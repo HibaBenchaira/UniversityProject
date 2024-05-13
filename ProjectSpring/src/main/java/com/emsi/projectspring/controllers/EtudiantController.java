@@ -1,7 +1,7 @@
 package com.emsi.projectspring.controllers;
 
-import com.emsi.projectspring.entities.Etudiant;
-import com.emsi.projectspring.services.EtudiantService;
+import com.emsi.projectspring.entities.*;
+import com.emsi.projectspring.services.*;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,9 +16,18 @@ import java.util.List;
 @AllArgsConstructor
 public class EtudiantController {
     private final EtudiantService etudiantService;
+    private CompteService compteService;
+    private NoteService noteService;
+    private DossierService dossierService;
 
     @RequestMapping("/createEtudiant")
-    public String createEtudiant() {
+    public String createEtudiant(ModelMap modelMap) {
+        List <Compte> comptes= compteService.getAllComptes();
+        List <Note> notes= noteService.getAllNotes();
+        List <Dossier> dossiers = dossierService.getAllDossiers();
+        modelMap.addAttribute("comptes", comptes);
+        modelMap.addAttribute("notes", notes);
+        modelMap.addAttribute("dossiers", dossiers);
         return "CreateEtudiant";
     }
 
@@ -45,12 +54,24 @@ public class EtudiantController {
     public String editEtudiant(@RequestParam("id") Long id, ModelMap modelMap) {
         Etudiant etudiantController = etudiantService.getEtudiantById(id);
         modelMap.addAttribute("etudiantView", etudiantController);
+        List <Compte> comptes= compteService.getAllComptes();
+        List <Note> notes= noteService.getAllNotes();
+        List <Dossier> dossiers = dossierService.getAllDossiers();
+        modelMap.addAttribute("comptes", comptes);
+        modelMap.addAttribute("notes", notes);
+        modelMap.addAttribute("dossiers", dossiers);
         return "EditEtudiant";
     }
 
     @RequestMapping("/updateEtudiant")
-    public String updateEtudiant(@ModelAttribute("etudiantVue") Etudiant etudiantController) {
+    public String updateEtudiant(@ModelAttribute("etudiantVue") Etudiant etudiantController,ModelMap modelMap) {
         etudiantService.updateEtudiant(etudiantController);
-        return "redirect:/createEtudiant";
+        List <Compte> comptes= compteService.getAllComptes();
+        List <Note> notes= noteService.getAllNotes();
+        List <Dossier> dossiers = dossierService.getAllDossiers();
+        modelMap.addAttribute("comptes", comptes);
+        modelMap.addAttribute("notes", notes);
+        modelMap.addAttribute("dossiers", dossiers);
+        return "CreateEtudiant";
     }
 }

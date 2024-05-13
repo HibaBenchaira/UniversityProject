@@ -1,7 +1,9 @@
 package com.emsi.projectspring.controllers;
 
 import com.emsi.projectspring.entities.Departement;
+import com.emsi.projectspring.entities.Faculte;
 import com.emsi.projectspring.services.DepartementService;
+import com.emsi.projectspring.services.FaculteService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -17,14 +19,16 @@ import java.util.List;
 @AllArgsConstructor
 public class DepartementController {
     private DepartementService departementService;
+    private FaculteService faculteService;
     @RequestMapping("/createDepartement")
-    public String createDepartement() {
+    public String createDepartement(ModelMap modelMap) {
+        List <Faculte> facultes = faculteService.getAllFacultes();
+        modelMap.addAttribute("facultes", facultes);
         return "CreateDepartement";
     }
 
     @RequestMapping("/saveDepartement")
-    public String saveDepartement(@Valid Departement departementController, BindingResult bindingResult){
-        if (bindingResult.hasErrors()) return "CreateDepartement";
+    public String saveDepartement(@ModelAttribute Departement departementController){
         Departement savedDepartement = departementService.saveDepartement(departementController);
         return "CreateDepartement";
     }
@@ -46,13 +50,17 @@ public class DepartementController {
     public String editDepartement(@RequestParam("id") Long id, ModelMap modelMap) {
         Departement departementController = departementService.getDepartementById(id);
         modelMap.addAttribute("departementView", departementController);
+        List <Faculte> facultes = faculteService.getAllFacultes();
+        modelMap.addAttribute("facultes", facultes);
         return "EditDepartement";
     }
 
     @RequestMapping("/updateDepartement")
-    public String updateDepartement(@ModelAttribute("departementVue") Departement departementController) {
+    public String updateDepartement(@ModelAttribute("departementVue") Departement departementController, ModelMap modelMap) {
         departementService.updatedepartement(departementController);
-        return createDepartement();
+        List <Faculte> facultes = faculteService.getAllFacultes();
+        modelMap.addAttribute("facultes", facultes);
+        return "CreateDepartement";
     }
 }
 

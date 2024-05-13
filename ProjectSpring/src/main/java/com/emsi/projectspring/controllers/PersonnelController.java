@@ -1,6 +1,6 @@
 package com.emsi.projectspring.controllers;
 
-import com.emsi.projectspring.entities.Compte;
+
 import com.emsi.projectspring.entities.Personnel;
 import com.emsi.projectspring.services.CompteService;
 import com.emsi.projectspring.services.PersonnelService;
@@ -22,8 +22,7 @@ public class PersonnelController {
     private PersonnelService personnelService;
     private CompteService  compteService;
     @RequestMapping("/createPersonnel")
-    public String createPersonnel(ModelMap modelMap) {
-        List<Compte> comptes= compteService.getAllComptes();
+    public String createPersonnel() {
         return "CreatePersonnel";
     }
     @RequestMapping("savePersonnel")
@@ -52,6 +51,6 @@ public class PersonnelController {
     @RequestMapping("/updatePersonnel")
     public String updatePeronnel(@ModelAttribute ("personnelVue") Personnel personnelController){
         personnelService.updatePersonnel(personnelController);
-        return createPersonnel();
+        return "CreatePersonnel";
     }
 }

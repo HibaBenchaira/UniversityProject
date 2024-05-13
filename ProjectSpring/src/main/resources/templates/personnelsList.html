@@ -23,6 +23,7 @@
                     <th scope="col">Nom Personnel</th>
                     <th scope="col">Email</th>
                     <th scope="col">Telephone</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,8 @@
                         <td th:text="${personnel.nomPersonnel}"></td>
                         <td th:text=" ${personnel.email}"></td>
                         <td th:text=" ${personnel.telephone}"></td>
+
+
                         <td>
                             <a      class="btn bg-danger"
                                     onclick="return confirm('Are you sure you want to delete?')"

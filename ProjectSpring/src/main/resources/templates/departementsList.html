@@ -18,13 +18,16 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">NOM</th>
+            <th scope="col">Nom Departement</th>
+            <th scope="col">Nom Faculte</th>
+
 
         </tr>
         </thead>
         <tbody>
             <tr th:each="departement:${departementsVue}">
                 <td th:text=" ${departement.nomDepartement}"></td>
+                <td th:text=" ${departement.faculte}"></td>
 
 
 

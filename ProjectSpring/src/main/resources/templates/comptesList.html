@@ -20,6 +20,8 @@
             <th scope="col">Login</th>
             <th scope="col">Password</th>
             <th scope="col">Role</th>
+            <th scope="col">Nom Etudiant</th>
+            <th scope="col">Nom Personnel</th>
         </tr>
         </thead>
         <tbody>
@@ -29,6 +31,8 @@
                 <td th:text="${compte.login}"></td>
                 <td th:text="${compte.password}"></td>
                 <td th:text="${compte.role}"></td>
+                <td th:text="${compte.etudiant}"></td>
+                <td th:text="${compte.personnel}"></td>
 
                 <td>
                     <a      class="btn bg-danger"

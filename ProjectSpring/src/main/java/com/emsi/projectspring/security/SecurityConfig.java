@@ -1,4 +1,4 @@
-package com.emsi.projectspring.Security;
+package com.emsi.projectspring.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -22,7 +22,7 @@ public class Dossier {
     private String diplome;
 
     @ManyToOne
-    private Personnel nomPersonnel;
+    private Personnel personnel;
     
     @OneToOne
     @JoinColumn(name = "etudiant_id", referencedColumnName = "id")

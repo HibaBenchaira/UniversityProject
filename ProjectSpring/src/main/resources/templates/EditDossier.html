@@ -27,6 +27,21 @@
             <label class="form-label" for="diplome">Diplome : </label>
             <input class="form-control" type="text" id="diplome" name="diplome" th:value="${dossierView.diplome}">
         </div>
+        <div class="form-group" >
+            <label for="personnel" class="form-label">Nom Personnel:</label>
+            <select name="personnel" id="personnel" required>
+                <option th:each="personnel:${personnels}" th:value="${personnel.id}" th:text="${personnel.nomPersonnel}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="etudiant" class="form-label">Nom Etudiant:</label>
+            <select name="etudiant" id="etudiant" required>
+                <option th:each="etudiant:${etudiants}" th:value="${etudiant.id}" th:text="${etudiant.nomEtudiant}"></option>
+            </select>
+        </div>
+        </div>
+
+
         <div class="form-group">
             <input class="form-control btn btn-primary" type="submit" value="Update">
         </div>

@@ -10,5 +10,5 @@ public interface FaculteService {
     void deleteFaculteById(Long id);
     void deleteAllFacultes();
     Faculte getFaculteById(Long id);
-    List<Faculte> getAllFacultes();
+   List<Faculte> getAllFacultes();
 }

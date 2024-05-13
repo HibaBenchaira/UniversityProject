@@ -24,7 +24,12 @@
             <label class="form-label" for="nomDepartement">Nom de departement: </label>
             <input class="form-control" type="text" id="nomDepartement" name="nomDepartement" th:value="${departementView.nomDepartement}">
         </div>
-
+        <div>
+            <label for="faculte">Nom Faculte: </label>
+            <select name="faculte" id="faculte" required>
+                <option th:each="faculte:${facultes}" th:value="${faculte.id}" th:text="${faculte.nomFaculte}"></option>
+            </select>
+        </div>
         <div class="form-group">
             <input class="form-control btn btn-primary" type="submit" value="Update">
         </div>

@@ -25,7 +25,7 @@ public class Compte {
     private String role;
 
     @OneToOne
-    @JoinColumn(name ="personal_id" , referencedColumnName = "id")
+    @JoinColumn(name ="personnel" , referencedColumnName = "id")
     private Personnel personnel;
 
     @OneToOne

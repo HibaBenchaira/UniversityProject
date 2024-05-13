@@ -29,11 +29,7 @@ public class Personnel {
     @Email
     private String email;
 
-    @OneToOne
-    @JoinColumn(name = "compte_id", referencedColumnName = "id")
-    private Compte compte;
-
-    @OneToMany(mappedBy = "nomPersonnel" , fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "personnel" , fetch = FetchType.LAZY)
     private List<Dossier> dossiers= new ArrayList<>();
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
