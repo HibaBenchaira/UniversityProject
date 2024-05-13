@@ -29,7 +29,7 @@ public class ModuleController {
     @RequestMapping("/modulesList")
     public String modulesList(ModelMap modelMap) {
         List <Module> modulesController = moduleService.getAllModules();
-        modelMap.addAttribute("modulessVue", modulesController);
+        modelMap.addAttribute("modulesVue", modulesController);
         return "modulesList";
     }
     @RequestMapping("/deleteModule")
