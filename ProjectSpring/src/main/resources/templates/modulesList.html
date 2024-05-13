@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"    xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="TemplateModule.html"
+>
+<head>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules List</title>
+</head>
+<body>
+<div layout:fragment="content">
+<main class="container mt-5">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NomModule</th>
+            <th scope="col">VolumeHoraire</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            <tr th:each="module:${modulesVue}" >
+                <td th:text=" ${module.id}"></td>
+                <td th:text="${module.nomModule}"></td>
+                <td th:text="${module.volumeHoraire}"></td>
+
+                <td>
+                    <a      class="btn bg-danger"
+                            onclick="return confirm('Are you sure you want to delete?')"
+                            th:href="@{/deleteModule(id=${module.id})}">
+                        Delete
+                    </a>
+                </td>
+                <td>
+                    <a      class="btn bg-success"
+                            th:href="@{/editModule(id=${module.id})}">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</main>
+
+</div>
+</body>
+</html>
