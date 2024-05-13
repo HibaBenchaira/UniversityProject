@@ -3,9 +3,11 @@ package com.emsi.projectspring.controllers;
 import com.emsi.projectspring.entities.Dossier;
 import com.emsi.projectspring.services.DossierService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +25,8 @@ public class DossierController {
     }
 
     @RequestMapping("saveDossier")
-    public String saveDossier(@ModelAttribute("dossierVue") Dossier dossierController) {
+    public String saveDossier(@Valid Dossier dossierController , BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateDossier";
         Dossier savedDossier = dossierService.saveDossier(dossierController);
         return "CreateDossier";
     }

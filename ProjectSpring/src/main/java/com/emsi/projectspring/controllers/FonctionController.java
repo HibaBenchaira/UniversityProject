@@ -3,9 +3,11 @@ package com.emsi.projectspring.controllers;
 import com.emsi.projectspring.entities.Fonction;
 import com.emsi.projectspring.services.FonctionService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,7 +25,8 @@ public class FonctionController {
     }
 
     @RequestMapping("saveFonction")
-    public String saveFonction(@ModelAttribute("fonctionVue") Fonction fonctionController) {
+    public String saveFonction(@Valid Fonction fonctionController  , BindingResult bindingResult){
+        if (bindingResult.hasErrors()) return "CreateFonction";
         Fonction savedFonction = fonctionService.saveFonction(fonctionController);
         return "CreateFonction";
     }
