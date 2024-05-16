@@ -18,23 +18,19 @@ public class Etudiant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomEtudiant;
-    private String Grade;
     private String telephone;
     private String address;
     private String email;
-
-    @OneToOne
-    @JoinColumn(name = "compte_id", referencedColumnName = "id")
-    private Compte compte;
-    @OneToOne
-    @JoinColumn(name = "dossier_id", referencedColumnName = "id")
-    private Dossier dossier;
-
-    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
-    private List<Inscription> inscriptions= new ArrayList<>();
-
+    private String password;
     @ManyToOne
-    private Note note;
+    private Filiere filiere;
+    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
+    private List<Dossier> dossiers= new ArrayList<>();
+    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
+    private List<Note> notes = new ArrayList<>();
+
+
+
 
 
 

@@ -25,7 +25,7 @@ public class Filiere {
     @ManyToOne
     private Departement departement;
     @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
-    private List<Inscription> inscriptions= new ArrayList<>();
-    @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Module> modules= new ArrayList<>();
+    @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
+    private List<Etudiant> etudiants= new ArrayList<>();
 }

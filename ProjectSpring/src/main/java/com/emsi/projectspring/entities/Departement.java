@@ -20,9 +20,6 @@ public class Departement {
     private Long id;
     @NotBlank(message = "ERROR NAME")
     private String nomDepartement;
-    @ManyToOne
-    private Faculte faculte;
-
     @OneToMany(mappedBy = "departement")
     private List<Filiere> filieres;
 }

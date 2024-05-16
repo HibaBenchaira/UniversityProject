@@ -21,11 +21,11 @@ public class Note {
     private Long id;
     private String typeEvaluation;
     private Double point;
+    @ManyToOne
+    private Etudiant etudiant;
+    @ManyToOne
+    private Module module;
 
 
-    @OneToMany(mappedBy = "note")
-    private List<Etudiant> etudiants= new ArrayList<>();
-    @OneToMany(mappedBy = "note")
-    private List<Module> modules= new ArrayList<>();
 
 }

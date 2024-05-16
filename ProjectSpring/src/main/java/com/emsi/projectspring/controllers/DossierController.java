@@ -1,18 +1,13 @@
 package com.emsi.projectspring.controllers;
 
-import com.emsi.projectspring.entities.Compte;
 import com.emsi.projectspring.entities.Dossier;
 import com.emsi.projectspring.entities.Etudiant;
-import com.emsi.projectspring.entities.Personnel;
 import com.emsi.projectspring.services.DossierService;
 
 import com.emsi.projectspring.services.EtudiantService;
-import com.emsi.projectspring.services.PersonnelService;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -20,20 +20,8 @@ public class Module {
     private Long id;
     private String nomModule;
     private Double volumeHoraire;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-        name="personnel_module",
-        joinColumns = @JoinColumn(name="module_id"),
-        inverseJoinColumns = @JoinColumn(name="personnel_id")
-    )
-    private List<Personnel> personnels=new ArrayList<>();
-
-    @ManyToOne
-    private Note note;
-    @OneToMany(mappedBy = "module",fetch = FetchType.LAZY)
-    private List<Matiere> matieres= new ArrayList<>();
     @ManyToOne
     private Filiere filiere;
-
+    @OneToMany(mappedBy = "module",fetch = FetchType.LAZY)
+    private List<Note> notes= new ArrayList<>();
 }

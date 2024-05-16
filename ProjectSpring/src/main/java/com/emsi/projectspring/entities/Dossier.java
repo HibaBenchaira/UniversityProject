@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -16,16 +18,12 @@ public class Dossier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "ERROR BULLETIN")
-    private String bulletin;
     @NotBlank(message = "ERROR DIPLOME")
     private String diplome;
-
+    @NotBlank(message = "ERROR DATE_INSCRIPTION")
+    private Date date_inscription;
     @ManyToOne
-    private Personnel personnel;
-    
-    @OneToOne
-    @JoinColumn(name = "etudiant_id", referencedColumnName = "id")
     private Etudiant etudiant;
+
 
 }

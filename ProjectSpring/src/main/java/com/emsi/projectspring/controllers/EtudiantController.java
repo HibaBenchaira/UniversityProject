@@ -22,10 +22,10 @@ public class EtudiantController {
 
     @RequestMapping("/createEtudiant")
     public String createEtudiant(ModelMap modelMap) {
-        List <Compte> comptes= compteService.getAllComptes();
+        //List <Compte> comptes= compteService.getAllComptes();
         List <Note> notes= noteService.getAllNotes();
         List <Dossier> dossiers = dossierService.getAllDossiers();
-        modelMap.addAttribute("comptes", comptes);
+       // modelMap.addAttribute("comptes", comptes);
         modelMap.addAttribute("notes", notes);
         modelMap.addAttribute("dossiers", dossiers);
         return "CreateEtudiant";
@@ -54,11 +54,9 @@ public class EtudiantController {
     public String editEtudiant(@RequestParam("id") Long id, ModelMap modelMap) {
         Etudiant etudiantController = etudiantService.getEtudiantById(id);
         modelMap.addAttribute("etudiantView", etudiantController);
-        List <Compte> comptes= compteService.getAllComptes();
-        List <Note> notes= noteService.getAllNotes();
+        //List <Compte> comptes= compteService.getAllComptes();
         List <Dossier> dossiers = dossierService.getAllDossiers();
-        modelMap.addAttribute("comptes", comptes);
-        modelMap.addAttribute("notes", notes);
+       // modelMap.addAttribute("comptes", comptes);
         modelMap.addAttribute("dossiers", dossiers);
         return "EditEtudiant";
     }
@@ -66,11 +64,9 @@ public class EtudiantController {
     @RequestMapping("/updateEtudiant")
     public String updateEtudiant(@ModelAttribute("etudiantVue") Etudiant etudiantController,ModelMap modelMap) {
         etudiantService.updateEtudiant(etudiantController);
-        List <Compte> comptes= compteService.getAllComptes();
-        List <Note> notes= noteService.getAllNotes();
+       // List <Compte> comptes= compteService.getAllComptes();
         List <Dossier> dossiers = dossierService.getAllDossiers();
-        modelMap.addAttribute("comptes", comptes);
-        modelMap.addAttribute("notes", notes);
+       // modelMap.addAttribute("comptes", comptes);
         modelMap.addAttribute("dossiers", dossiers);
         return "CreateEtudiant";
     }
