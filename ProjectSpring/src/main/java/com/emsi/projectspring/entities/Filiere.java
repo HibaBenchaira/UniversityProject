@@ -23,9 +23,11 @@ public class Filiere {
     private String nomFiliere;
 
     @ManyToOne
-    private Departement departement;
+    private Salle salle;
     @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Module> modules= new ArrayList<>();
     @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
     private List<Etudiant> etudiants= new ArrayList<>();
+    @OneToMany(mappedBy = "filiere",fetch = FetchType.LAZY)
+    private List<Professeur> professeurs= new ArrayList<>();
 }

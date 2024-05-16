@@ -22,19 +22,19 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${departementsVue}" var="departement">
+        <c:forEach items="${departementsVue}" var="salle">
             <tr>
-                <td>${departement.id}</td>
-                <td>${departement.nomDepartement}</td>
+                <td>${salle.id}</td>
+                <td>${salle.nomDepartement}</td>
 
                 <td>
                     <a      onclick="return confirm('Are you sure you want to delete?')"
-                            href="/deleteDepartement?id=${departement.id}">
+                            href="/deleteDepartement?id=${salle.id}">
                         Delete
                     </a>
                 </td>
                 <td>
-                    <a href="/editDepartement?id=${departement.id}">
+                    <a href="/editDepartement?id=${salle.id}">
                         Edit
                     </a>
                 </td>

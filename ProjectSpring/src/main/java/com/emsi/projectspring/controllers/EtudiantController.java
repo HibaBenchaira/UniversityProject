@@ -16,18 +16,12 @@ import java.util.List;
 @AllArgsConstructor
 public class EtudiantController {
     private final EtudiantService etudiantService;
-    private CompteService compteService;
-    private NoteService noteService;
-    private DossierService dossierService;
+    private FiliereService filiereService;
 
     @RequestMapping("/createEtudiant")
     public String createEtudiant(ModelMap modelMap) {
-        //List <Compte> comptes= compteService.getAllComptes();
-        List <Note> notes= noteService.getAllNotes();
-        List <Dossier> dossiers = dossierService.getAllDossiers();
-       // modelMap.addAttribute("comptes", comptes);
-        modelMap.addAttribute("notes", notes);
-        modelMap.addAttribute("dossiers", dossiers);
+        List <Filiere> filieres = filiereService.getAllFilieres();
+        modelMap.addAttribute("filieres", filieres);
         return "CreateEtudiant";
     }
 
@@ -54,20 +48,16 @@ public class EtudiantController {
     public String editEtudiant(@RequestParam("id") Long id, ModelMap modelMap) {
         Etudiant etudiantController = etudiantService.getEtudiantById(id);
         modelMap.addAttribute("etudiantView", etudiantController);
-        //List <Compte> comptes= compteService.getAllComptes();
-        List <Dossier> dossiers = dossierService.getAllDossiers();
-       // modelMap.addAttribute("comptes", comptes);
-        modelMap.addAttribute("dossiers", dossiers);
+        List <Filiere> filieres = filiereService.getAllFilieres();
+        modelMap.addAttribute("filieres", filieres);
         return "EditEtudiant";
     }
 
     @RequestMapping("/updateEtudiant")
     public String updateEtudiant(@ModelAttribute("etudiantVue") Etudiant etudiantController,ModelMap modelMap) {
         etudiantService.updateEtudiant(etudiantController);
-       // List <Compte> comptes= compteService.getAllComptes();
-        List <Dossier> dossiers = dossierService.getAllDossiers();
-       // modelMap.addAttribute("comptes", comptes);
-        modelMap.addAttribute("dossiers", dossiers);
+        List <Filiere> filieres = filiereService.getAllFilieres();
+        modelMap.addAttribute("filieres", filieres);
         return "CreateEtudiant";
     }
 }

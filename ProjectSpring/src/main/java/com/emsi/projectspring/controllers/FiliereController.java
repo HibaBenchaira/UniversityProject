@@ -1,7 +1,11 @@
 package com.emsi.projectspring.controllers;
 
 import com.emsi.projectspring.entities.Filiere;
+import com.emsi.projectspring.entities.Module;
+import com.emsi.projectspring.entities.Salle;
 import com.emsi.projectspring.services.FiliereService;
+import com.emsi.projectspring.services.ModuleService;
+import com.emsi.projectspring.services.SalleService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -17,13 +21,16 @@ import java.util.List;
 public class FiliereController {
 
     private FiliereService filiereService;
+    private SalleService salleService;
     @RequestMapping("/createFiliere")
-    public String createFiliere(){
+    public String createFiliere(ModelMap modelMap){
+        List <Salle> salles = salleService.getAllSalles();
+        modelMap.addAttribute("salles", salles);
         return"CreateFiliere";
     }
     @RequestMapping("/saveFiliere")
-    public String saveFiliere(@Valid Filiere filiereController , BindingResult bindingResult){
-        if (bindingResult.hasErrors()) return "CreateFiliere";
+    public String saveFiliere(@Valid Filiere filiereController){
+
         Filiere saveFiliere = filiereService.saveFiliere(filiereController);
         return "CreateFiliere";
     }
@@ -44,6 +51,10 @@ public class FiliereController {
     public String editFiliere(@RequestParam("id")Long id,ModelMap modelMap){
         Filiere filiereController = filiereService.getFiliereById(id);
         modelMap.addAttribute("filiereView",filiereController);
+        Salle  salleController   = salleService.getSalleById(id);
+        modelMap.addAttribute("salleView",salleController);
+
+
         return "EditFiliere";
     }@RequestMapping("/updateFiliere")
     public String updateFiliere(@ModelAttribute ("filiereVue") Filiere filiereController){

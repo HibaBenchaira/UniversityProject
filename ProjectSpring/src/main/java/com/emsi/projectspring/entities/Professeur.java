@@ -6,26 +6,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
-public class Note {
+public class Professeur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String typeEvaluation;
-    private Double point;
+    private String nomProfesseur;
+    private String telephone;
+    private String address;
+    private String email;
+    private String password;
     @ManyToOne
-    private Etudiant etudiant;
-    @ManyToOne
-    private Module module;
-
-
-
+    private Filiere filiere;
 }

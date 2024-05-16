@@ -14,14 +14,16 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Module {
+public class Evaluation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomModule;
-    private Double volumeHoraire;
+
+    private String typeEvaluation;
+
     @ManyToOne
-    private Filiere filiere;
-    @OneToMany(mappedBy = "module",fetch = FetchType.LAZY)
-    private List<Evaluation> evaluations = new ArrayList<>();
+    private Module module;
+
+    @OneToMany(mappedBy = "evaluation", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<EtudiantEvaluation> etudiants = new ArrayList<>();
 }

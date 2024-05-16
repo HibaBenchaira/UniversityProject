@@ -14,12 +14,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Departement {
+public class Salle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message = "ERROR NAME")
-    private String nomDepartement;
-    @OneToMany(mappedBy = "departement")
+    private Long numeroSalle;
+    @OneToMany(mappedBy = "salle")
     private List<Filiere> filieres;
 }

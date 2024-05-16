@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -22,16 +23,13 @@ public class Etudiant {
     private String address;
     private String email;
     private String password;
+
     @ManyToOne
     private Filiere filiere;
-    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
-    private List<Dossier> dossiers= new ArrayList<>();
-    @OneToMany(mappedBy = "etudiant",fetch = FetchType.LAZY)
-    private List<Note> notes = new ArrayList<>();
 
+    @OneToMany(mappedBy = "etudiant", fetch = FetchType.LAZY)
+    private List<Dossier> dossiers = new ArrayList<>();
 
-
-
-
-
+    @OneToMany(mappedBy = "etudiant", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<EtudiantEvaluation> evaluations = new ArrayList<>();
 }

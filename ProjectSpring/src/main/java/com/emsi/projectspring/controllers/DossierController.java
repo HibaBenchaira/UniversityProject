@@ -19,14 +19,12 @@ import java.util.List;
 public class DossierController {
     private DossierService dossierService;
     private EtudiantService etudiantService;
-    private PersonnelService personnelService;
+
 
     @RequestMapping("/createDossier")
     public String createDossier(ModelMap modelMap) {
         List<Etudiant> etudiants = etudiantService.getAllEtudiants();
-        List<Personnel> personnels = personnelService.getAllPersonnels();
         modelMap.addAttribute("etudiants", etudiants);
-        modelMap.addAttribute("personnels", personnels);
         return "CreateDossier";
     }
 
@@ -53,10 +51,8 @@ public class DossierController {
     public String editDossier(@RequestParam("id") Long id, ModelMap modelMap) {
         Dossier dossierController = dossierService.getDossierById(id);
         List<Etudiant> etudiants = etudiantService.getAllEtudiants();
-        List<Personnel> personnels = personnelService.getAllPersonnels();
         modelMap.addAttribute("dossierView", dossierController);
         modelMap.addAttribute("etudiants", etudiants);
-        modelMap.addAttribute("personnels", personnels);
         return "EditDossier";
     }
 
@@ -64,9 +60,7 @@ public class DossierController {
     public String updateDossier(@ModelAttribute("dossierVue") Dossier dossierController, ModelMap modelMap) {
         dossierService.updateDossier(dossierController);
         List<Etudiant> etudiants = etudiantService.getAllEtudiants();
-        List<Personnel> personnels = personnelService.getAllPersonnels();
         modelMap.addAttribute("etudiants", etudiants);
-        modelMap.addAttribute("personnels", personnels);
         return "CreateDossier";
     }
 }
