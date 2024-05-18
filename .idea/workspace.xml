@@ -5,31 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97c4ecb1-2e2d-47e2-9314-ad167153f514" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/UniversityProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantEvaluationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ProfesseurController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/security/controllers/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/static/home/assets/img/hero-bg-light.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/static/home/assets/img/hero-services-img.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/DossierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/DossierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EvaluationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EvaluationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/FiliereController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/FiliereController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/SalleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/SalleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Etudiant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Professeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-alerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-alerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-badges.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-badges.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-breadcrumbs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-carousel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-list-group.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-list-group.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-pagination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-progress.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-spinners.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/templates/components-spinners.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +134,7 @@
       <workItem from="1715981100623" duration="226000" />
       <workItem from="1715981393707" duration="25000" />
       <workItem from="1715981435674" duration="2920000" />
-      <workItem from="1715986800730" duration="32634000" />
+      <workItem from="1715986800730" duration="33078000" />
     </task>
     <servers />
   </component>
