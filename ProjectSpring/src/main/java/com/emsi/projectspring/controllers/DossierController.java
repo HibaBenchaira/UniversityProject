@@ -47,20 +47,18 @@ public class DossierController {
         return dossiersList(modelMap);
     }
 
-    @RequestMapping("/editDossier")
+    /*@RequestMapping("/editDossier")
     public String editDossier(@RequestParam("id") Long id, ModelMap modelMap) {
         Dossier dossierController = dossierService.getDossierById(id);
         List<Etudiant> etudiants = etudiantService.getAllEtudiants();
         modelMap.addAttribute("dossierView", dossierController);
         modelMap.addAttribute("etudiants", etudiants);
         return "EditDossier";
-    }
+    }*/
 
     @RequestMapping("/updateDossier")
     public String updateDossier(@ModelAttribute("dossierVue") Dossier dossierController, ModelMap modelMap) {
         dossierService.updateDossier(dossierController);
-        List<Etudiant> etudiants = etudiantService.getAllEtudiants();
-        modelMap.addAttribute("etudiants", etudiants);
         return "CreateDossier";
     }
 }

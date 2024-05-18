@@ -22,7 +22,7 @@ public class SalleController {
     }
 
     @RequestMapping("/saveSalle")
-    public String saveSalle(@ModelAttribute Salle salleController){
+    public String saveSalle(@ModelAttribute("salleVue") Salle salleController){
         Salle savedSalle = salleService.saveSalle(salleController);
         return "CreateSalle";
     }
@@ -40,16 +40,16 @@ public class SalleController {
         return sallesList(modelMap);
     }
 
-    @RequestMapping("/editSalle")
+   /* @RequestMapping("/editSalle")
     public String editSalle(@RequestParam("id") Long id, ModelMap modelMap) {
         Salle salleController = salleService.getSalleById(id);
         modelMap.addAttribute("salleView", salleController);
 
         return "EditSalle";
-    }
+    }*/
 
     @RequestMapping("/updateSalle")
-    public String updateSalle(@ModelAttribute("SalleVue") Salle salleController) {
+    public String updateSalle(@ModelAttribute("salleVue") Salle salleController) {
         salleService.updateSalle(salleController);
         return "CreateSalle";
     }

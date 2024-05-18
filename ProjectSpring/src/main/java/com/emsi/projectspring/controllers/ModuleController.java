@@ -1,6 +1,8 @@
 package com.emsi.projectspring.controllers;
 
+import com.emsi.projectspring.entities.Filiere;
 import com.emsi.projectspring.entities.Module;
+import com.emsi.projectspring.services.FiliereService;
 import com.emsi.projectspring.services.ModuleService;
 
 
@@ -17,8 +19,11 @@ import java.util.List;
 @AllArgsConstructor
 public class ModuleController {
     private ModuleService moduleService;
+    private FiliereService filiereService;
     @RequestMapping("/createModule")
-    public String createModule() {
+    public String createModule(ModelMap modelMap) {
+        List <Filiere> filieres = filiereService.getAllFilieres();
+        modelMap.addAttribute("filieres", filieres);
         return "CreateModule";
     }
     @RequestMapping("saveModule")
@@ -37,15 +42,15 @@ public class ModuleController {
         moduleService.deleteModuleById(id);
         return modulesList(modelMap);
     }
-    @RequestMapping("/editModule")
+    /*@RequestMapping("/editModule")
     public String editModule(@RequestParam("id")Long id,ModelMap modelMap){
         Module moduleController = moduleService.getModuleById(id);
         modelMap.addAttribute("moduleView",moduleController);
         return "EditModule";
-    }
+    }*/
     @RequestMapping("/updateModule")
     public String updateModule(@ModelAttribute ("moduleVue") Module moduleController){
         moduleService.updateModule(moduleController);
-        return createModule();
+        return "CreateModule";
     }
 }

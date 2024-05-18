@@ -1,5 +1,6 @@
 package com.emsi.projectspring.controllers;
 
+import com.emsi.projectspring.entities.Evaluation;
 import com.emsi.projectspring.entities.Filiere;
 import com.emsi.projectspring.entities.Module;
 import com.emsi.projectspring.entities.Salle;
@@ -29,9 +30,8 @@ public class FiliereController {
         return"CreateFiliere";
     }
     @RequestMapping("/saveFiliere")
-    public String saveFiliere(@Valid Filiere filiereController){
-
-        Filiere saveFiliere = filiereService.saveFiliere(filiereController);
+    public String saveFiliere(@ModelAttribute("filiereVue") Filiere filiereController) {
+        Filiere savedFiliere= filiereService.saveFiliere(filiereController);
         return "CreateFiliere";
     }
     @RequestMapping("/filieresList")
@@ -47,19 +47,18 @@ public class FiliereController {
         return  filieresList(modelMap);
 
     }
-    @RequestMapping("/editFiliere")
+    /*@RequestMapping("/editFiliere")
     public String editFiliere(@RequestParam("id")Long id,ModelMap modelMap){
         Filiere filiereController = filiereService.getFiliereById(id);
         modelMap.addAttribute("filiereView",filiereController);
         Salle  salleController   = salleService.getSalleById(id);
         modelMap.addAttribute("salleView",salleController);
-
-
         return "EditFiliere";
-    }@RequestMapping("/updateFiliere")
+    }*/
+    @RequestMapping("/updateFiliere")
     public String updateFiliere(@ModelAttribute ("filiereVue") Filiere filiereController){
         filiereService.updateFiliere(filiereController);
-        return createFiliere();
+        return "CreateFiliere";
     }
 
 

@@ -27,7 +27,7 @@ public class EvaluationController {
     }
 
     @RequestMapping("/saveEvaluation")
-    public String saveEvaluation(@ModelAttribute("EvaluationVue") Evaluation evaluationController) {
+    public String saveEvaluation(@ModelAttribute("evaluationVue") Evaluation evaluationController) {
         Evaluation savedEvaluation = evaluationService.saveEvaluation(evaluationController);
         return "CreateEvaluation";
     }
@@ -45,20 +45,18 @@ public class EvaluationController {
         return "redirect:/EvaluationsList";
     }
 
-    @RequestMapping("/editEvaluation")
+    /*@RequestMapping("/editEvaluation")
     public String editEvaluation(@RequestParam("id") Long id, ModelMap modelMap) {
         Evaluation evaluationController = evaluationService.getEvaluationById(id);
         modelMap.addAttribute("evaluationView", evaluationController);
         List <Module> modules = moduleService.getAllModules();
         modelMap.addAttribute("modules", modules);
         return "EditEvaluation";
-    }
+    }*/
 
     @RequestMapping("/updateEvaluation")
     public String updateEvaluation(@ModelAttribute("evaluationVue") Evaluation evaluationController,ModelMap modelMap) {
         evaluationService.updateEvaluation(evaluationController);
-        List <Module> modules = moduleService.getAllModules();
-        modelMap.addAttribute("modules", modules);
         return "CreateEvaluation";
     }
 }

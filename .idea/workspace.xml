@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97c4ecb1-2e2d-47e2-9314-ad167153f514" name="Changes" comment="" />
+    <list default="true" id="97c4ecb1-2e2d-47e2-9314-ad167153f514" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/UniversityProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantEvaluationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ProfesseurController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/security/controllers/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/static/home/assets/img/hero-bg-light.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSpring/src/main/resources/static/home/assets/img/hero-services-img.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/DossierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/DossierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EtudiantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EvaluationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/EvaluationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/FiliereController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/FiliereController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/ModuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/SalleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/controllers/SalleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Professeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSpring/src/main/java/com/emsi/projectspring/entities/Professeur.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +42,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -31,9 +58,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -45,22 +75,49 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ProjectSpringApplication.executor": "Run",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "test",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Documents/GitHub/ELMEHDIDARRASProjectPFA",
+    "last_opened_file_path": "C:/Users/bench/Documents/GitHub/UniversityProject/ProjectSpring/src/main/resources/static/dashbord",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\dashbord" />
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\assets\css" />
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\assets\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\dashboard" />
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static" />
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\home" />
+      <recent name="C:\Users\bench\Documents\GitHub\UniversityProject\ProjectSpring\src\main\resources\static\home\assets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.emsi.projectspring.controllers" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ProjectSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -74,7 +131,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -87,10 +145,25 @@
       <option name="presentableId" value="Default" />
       <updated>1714572423095</updated>
       <workItem from="1714572423725" duration="2014000" />
+      <workItem from="1715981100623" duration="226000" />
+      <workItem from="1715981393707" duration="25000" />
+      <workItem from="1715981435674" duration="2920000" />
+      <workItem from="1715986800730" duration="32634000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

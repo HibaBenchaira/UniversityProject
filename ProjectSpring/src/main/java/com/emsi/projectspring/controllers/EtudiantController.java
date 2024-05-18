@@ -6,6 +6,7 @@ import com.emsi.projectspring.services.*;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,14 +16,14 @@ import java.util.List;
 @Controller
 @AllArgsConstructor
 public class EtudiantController {
-    private final EtudiantService etudiantService;
+    private  EtudiantService etudiantService;
     private FiliereService filiereService;
 
-    @RequestMapping("/createEtudiant")
-    public String createEtudiant(ModelMap modelMap) {
+    @RequestMapping("/etudiant")
+    public String etudiant(ModelMap modelMap) {
         List <Filiere> filieres = filiereService.getAllFilieres();
         modelMap.addAttribute("filieres", filieres);
-        return "CreateEtudiant";
+        return "etudiant";
     }
 
     @RequestMapping("/saveEtudiant")
@@ -44,20 +45,19 @@ public class EtudiantController {
         return "redirect:/etudiantsList";
     }
 
-    @RequestMapping("/editEtudiant")
+    /*@RequestMapping("/editEtudiant")
     public String editEtudiant(@RequestParam("id") Long id, ModelMap modelMap) {
         Etudiant etudiantController = etudiantService.getEtudiantById(id);
         modelMap.addAttribute("etudiantView", etudiantController);
         List <Filiere> filieres = filiereService.getAllFilieres();
         modelMap.addAttribute("filieres", filieres);
         return "EditEtudiant";
-    }
+    }*/
 
     @RequestMapping("/updateEtudiant")
     public String updateEtudiant(@ModelAttribute("etudiantVue") Etudiant etudiantController,ModelMap modelMap) {
         etudiantService.updateEtudiant(etudiantController);
-        List <Filiere> filieres = filiereService.getAllFilieres();
-        modelMap.addAttribute("filieres", filieres);
         return "CreateEtudiant";
     }
+
 }

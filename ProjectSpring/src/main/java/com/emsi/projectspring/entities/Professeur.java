@@ -19,7 +19,6 @@ public class Professeur {
     private String telephone;
     private String address;
     private String email;
-    private String password;
     @ManyToOne
     private Filiere filiere;
 }
